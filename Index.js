@@ -40,4 +40,31 @@ function repeatedNumber(array){
     return repeatedNumbers;
 }
 
-console.log(repeatedNumber([1,2,3,4,5,6,7,8,8,9,9]),'repeated numbers')
+console.log(repeatedNumber([1,2,3,4,5,6,7,8,8,9,9]),'repeated numbers')   
+
+var obj = [
+    {
+       id : 4,
+       name:"abc"
+    },
+
+    {
+         id : 10,
+       name:"ab2"
+    },
+
+    {
+         id : 5,
+       name:"abc3"
+    },
+    
+    {
+    
+         id : 6,
+       name:"abc5"
+    }
+]
+//for sorting array or object
+console.log(obj.sort(function(userA, userB){
+    return userA.id - userB.id;
+}));
