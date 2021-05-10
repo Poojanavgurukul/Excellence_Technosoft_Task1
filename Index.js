@@ -2,11 +2,30 @@
 //function take an array and return even numbers
 function evenNumber(array){
     const result=[];
-    for (var i=0;i<array.length;i++){
-        if (array[i]%2===0){
+    for ( var i=0;i<array.length;i++ ){
+        if ( array[i]%2===0 ){
             result.push(array[i]);
         }
     }
     return result
 }
 console.log(evenNumber([1,2,4,6,8,9,10]))
+//Find the maximum consecutive 1's in an array of 0's and 1's.
+// function take an array and it count the consecutive 1 in array of 1 and 0 
+function maxConsecutive1(array){
+  var count = 0;
+  var  maxConsecutive = 0;
+  for ( var i in array ){
+      if ( array[i] === 1 ){
+          count = count+1;
+      }
+      else{
+          count = 0;
+      }
+      if ( count >maxConsecutive ){
+          maxConsecutive = count
+      }
+  }
+  return maxConsecutive;
+}
+console.log( maxConsecutive1([0,0,1,1,0,0,0,1,0,0,1,1,1,0]))
